@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+body {
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
+
+.header {
+    grid-area: header;
+    padding: 5% 10% 10%;
+    background-image: url(../images/bg-pattern-intro-desktop.svg), linear-gradient(to right, var(--very-light-red) , var(--light-red));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 0 0 0 6.25rem;
+    margin-bottom: 6.25rem;
+}
+
+.header-menu {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 6.25rem;
+    position: relative;
+    margin-bottom: 7.5rem;
+}
+
+.header .menu__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .menu__box div {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.header .menu__item {
+    position: relative;
+}
+.header .login-area {
+    display: flex;
+    gap: 1.8rem;
+    position: absolute;
+    right: 0;
+}
+
+.header .login-area a {
+    color: var(--white);
+}
+
+.header .login-area .sign {
+    color: var(--light-red-cta);
+    padding: 0.6rem 1.8rem;
+    background: var(--white);
+    font-weight: 700;
+    border-radius: 6.25rem;
+    transition: 0.3s;
+}
+
+.header .login-area .sign:hover {
+    color: var(--white);    
+    background: var(--very-light-red-cta);
+}
+
+.header .acordeon {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--white);
+    font-size: 1rem;
+    position: relative;
+}
+
+.header .acordeon:hover {
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.acordeon::after {
+    content: url(../images/icon-arrow-light.svg);
+    margin-left: 0.3rem;
+    align-self: center;
+}
+
+.active::after {
+    content: url(../images/icon-arrow-light.svg);
+    transform: rotate(180deg);
+}
+
+.header .info {
+    font-size: 1rem;
+    color: var(--very-dark-black-blue);
+    font-family: 'Ubuntu', sans-serif;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 10px;
+    top: 150%;
+    background: var(--white);
+}
+
+.product {
+    left: -80%;
+}
+
+.header .info li {
+    padding: 0.6rem 1.25rem;
+}
+
+.header .info a {
+    transition: 0.3s ease-in-out;
+}
+
+.header .info a:hover {
+    font-weight: 700;
+}
+
+.header .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .intro h1 {
+    color: var(--white);
+    font: 500 3.5rem 'Overpass', sans-serif;
+    margin-bottom: 0.6rem;
+}
+
+.header .intro p {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--white);
+    font-weight: 300;
+    margin-bottom: 3.1rem;
+}
+
+.header .intro-links {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.intro-links a {
+    padding: 0.6rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.header .start {
+    color: var(--very-light-red-cta);
+    background: var(--white);
+    font-weight: 700;
+    border-radius: 6.25rem;
+    transition: 0.3s;
+}
+
+.header .start:hover {
+    color: var(--white);
+    background: var(--very-light-red-cta);
+}
+
+.header .learn {
+    color: var(--white);
+    font-weight: 700;
+    border-radius: 6.25rem;
+    border: 1px solid var(--white);
+    padding: 0.6rem 1.25rem;
+    transition: 0.3s;
+}
+
+.header .learn:hover {
+    color: var(--light-red-cta);
+    background: #fff;
+}
+
+hr {
+    display: none;
+}
+
+.main {
+    grid-area: main;
+}
+
+.main .hero {
+    padding-bottom: 25%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 6.25rem;
+    background: url(../images/illustration-editor-desktop.svg) 150% top no-repeat;
+    background-size: 60%;
+}
+
+.main .hero h1 {
+    text-align: center;
+    font: 700 2.5rem 'Overpass', sans-serif;
+    color: var(--very-dark-blue);
+}
+
+.main .hero section {
+    display: flex;
+    align-items: center;
+}
+
+.main .hero article {
+    padding: 0 55% 0 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 3.1rem;
+}
+
+.main .hero article h2,
+.main .benefits article h2 {
+    font: 700 1.5rem 'Overpass', sans-serif;
+    margin-bottom: 1.8rem;
+    color: var(--very-dark-blue);
+}
+
+.main .hero article p,
+.main .benefits article p {
+    font: 400 1.1rem 'Ubuntu', sans-serif;
+    color: var(--very-dark-grayish-blue);
+}
+
+.main .infrastructure {
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background-image: url(../images/bg-pattern-circles.svg), linear-gradient(to right, var(--very-dark-gray-blue) , var(--very-dark-desatured-blue));
+    background-repeat: no-repeat;
+    background-position: -70% 100%;
+    border-radius: 0 6.25rem;
+    margin-bottom: 4.3rem;
+}
+
+.main .infrastructure img {
+    margin-top: -10%;
+}
+
+.main .infrastructure h2 {
+    font: 600 2rem 'Overpass', sans-serif;
+    color: var(--white);
+    margin-bottom: 1.25rem;
+}
+
+.main .infrastructure p {
+    font: 400 1rem 'Ubuntu', sans-serif;
+    color: var(--grayish-blue);
+}
+
+.main .benefits {
+    padding-right: 10%;
+    display: flex;
+    align-items: center;
+    gap: 3.1rem;
+    margin-bottom: 4.3rem;
+}
+
+.main .benefits article {
+    display: flex;
+    flex-direction: column;
+    gap: 3.1rem;
+}
+
+.main .benefits img {
+    margin-left: -20%;
+}
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background: var(--very-dark-black-blue);
+    border-top-right-radius: 6.25rem;
+    padding: 5% 10%;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.footer a {
+    font: 400 1rem 'Ubuntu', sans-serif;
+    color: var(--grayish-blue);
+}
+
+.footer ul li:first-child {
+    font: 700 1rem 'Ubuntu', sans-serif;
+    color: var(--grayish-blue);
+    margin-bottom: 1.8rem;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.aparecer {
+    left: 0% !important;
+}
+
+input {
+    display: none;
+}
+
+.img-mobile {
+    display: none;
+}

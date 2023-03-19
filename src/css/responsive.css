@@ -1,0 +1,198 @@
+@media(max-width:500px) {
+    .header {
+        position: relative;
+        padding: 10% 5%;
+        text-align: center;
+    }
+    
+    .header .header-menu {
+        margin-bottom: 4rem;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    #menu__toggle:checked+.menu__btn>span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked+.menu__btn>span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    #menu__toggle:checked+.menu__btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    .menu__btn {
+        top: 1.8rem;
+        right: 7%;
+        position: absolute;
+        width: 2rem;
+        height: 1rem;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .menu__btn>span,
+    .menu__btn>span::before,
+    .menu__btn>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--white);
+        transition-duration: .25s;
+    }
+
+    .menu__btn>span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu__btn>span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .header .menu__box {
+        position: absolute;
+        top: 130%;
+        width: 100%;
+        height: fit-content;
+        gap: 1.25rem;
+        gap: 1.8rem;
+        background-color: var(--white);
+        left: -140%;
+        padding: 1.8rem;
+        align-items: center;
+        flex-direction: column;
+        background-size: contain;
+        transition-duration: .25s;
+        border-radius: 10px;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .header .login-area {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .header .menu__box div {
+        flex-direction: column;
+    }
+
+    .header .acordeon {
+        color: var(--very-dark-black-blue);
+        margin-bottom: 0.6rem;
+    }
+
+    .header .acordeon::after {
+        content: url(../images/icon-arrow-dark.svg);
+    }
+
+    .header .info {
+        position: relative;
+        background: hsl(240, 27%, 94%);
+    }
+
+    .header .info li a {
+        color: var(--very-dark-grayish-blue);
+    }
+
+    .header .product {
+        left: auto;
+    }
+
+    .header .login-area a {
+        color: var(--very-dark-black-blue);
+    }
+
+    .header .login-area .sign {
+        background: linear-gradient(to right, var(--very-light-red) , var(--light-red));
+        color: #fff;
+    }
+
+    hr {
+        display: block;
+        width: 100%;
+    }
+
+    .img-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .main .hero {
+        background: none;
+        padding: 0 5%;
+        gap: 1.8rem;
+        margin-bottom: 6.25rem;
+    }
+
+    .main .hero article {
+        padding: 0;
+        text-align: center;
+    }
+    
+    .main .infrastructure {
+        flex-direction: column;
+        border-radius: 0 6.25rem;
+        padding: 10% 5%;
+        text-align: center;
+    }
+
+    .main .infrastructure img {
+        width: 100%;
+    }
+
+    .main .benefits {
+        flex-direction: column;
+        padding: 10% 5%;
+        text-align: center;
+    }
+
+    .main .benefits img {
+        width: 90%;
+        margin: 0;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 3.1rem;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .footer ul li:first-child  {
+        margin-bottom: 0.6rem;
+        font-size: 1.5rem;
+    }
+
+    .main .hero article h2,
+    .main .benefits article h2 {
+        font-size: 2rem;
+    }
+
+    .main .hero article p,
+    .main .benefits article p {
+        font-size: 1.5rem;
+    }
+
+    .main .infrastructure h2 {
+        font-size: 2.5rem;
+    }
+
+    .main .infrastructure p {
+        font-size: 1.5rem;
+    }
+
+    .footer a {
+        font-size: 1.5rem;
+    }
+
+}
